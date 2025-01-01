@@ -28,3 +28,22 @@ function delayedCall(fn: (name: string) => void) {
 }
 
 delayedCall(greet);
+
+// interface
+interface UserType {
+    firstName: string,
+    lastName: string,
+    age: number
+}
+
+function greetUser(user: UserType) {
+    console.log(`Hello ${user.firstName} ${user.lastName} you are ${user.age} years old`);
+}
+
+let user1: UserType = {
+    firstName: "Rahul",
+    lastName: "Codes",
+    age: 20
+}
+
+greetUser(user1); 
