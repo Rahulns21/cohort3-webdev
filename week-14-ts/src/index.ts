@@ -41,15 +41,21 @@ let user1: UserType = {
 
 console.log(greetUser(user1));
 
+interface Address {
+    city: string;
+    country: string;
+    pincode: number;
+}
+
 // interface
 interface User {
     name: string;
     age: number;
-    address: {
-        city?: string;
-        country?: string,
-        pincode: number;
-    };
+    address: Address
+}
+
+interface Office {
+    address: Address
 }
 
 let user2: User = {
