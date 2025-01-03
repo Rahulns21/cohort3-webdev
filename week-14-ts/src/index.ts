@@ -46,8 +46,8 @@ interface User {
     name: string;
     age: number;
     address: {
-        city: string;
-        country: string,
+        city?: string;
+        country?: string,
         pincode: number;
     };
 }
