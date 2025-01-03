@@ -1,8 +1,8 @@
 function greet(firstName: string) {
-    console.log(`Hello ${firstName}`);
+    return `Hello ${firstName}`
 }
 
-greet("Rahul");
+console.log(greet("Rahul"));
 
 function sum(num1: number, num2: number) {
     return num1 + num2;
@@ -22,13 +22,6 @@ function isLegal(age: number) {
 
 console.log(isLegal(18));
 
-// takes function as input, and runs it after 1 second
-function delayedCall(fn: (name: string) => void) {
-    setTimeout(fn, 1000);
-}
-
-delayedCall(greet);
-
 // interface
 interface UserType {
     firstName: string,
@@ -37,7 +30,7 @@ interface UserType {
 }
 
 function greetUser(user: UserType) {
-    console.log(`Hello ${user.firstName} ${user.lastName} you are ${user.age} years old`);
+    return `Hello ${user.firstName} ${user.lastName} you are ${user.age} years old`;
 }
 
 let user1: UserType = {
@@ -46,4 +39,4 @@ let user1: UserType = {
     age: 20
 }
 
-greetUser(user1); 
+greetUser(user1);
