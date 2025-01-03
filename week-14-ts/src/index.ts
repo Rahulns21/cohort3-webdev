@@ -24,9 +24,9 @@ console.log(isLegal(18));
 
 // interface
 interface UserType {
-    firstName: string,
-    lastName: string,
-    age: number
+    firstName: string;
+    lastName: string;
+    age: number;
 }
 
 function greetUser(user: UserType) {
@@ -39,4 +39,40 @@ let user1: UserType = {
     age: 20
 }
 
-greetUser(user1);
+console.log(greetUser(user1));
+
+// interface
+interface User {
+    name: string;
+    age: number;
+    address: {
+        city: string;
+        country: string,
+        pincode: number;
+    };
+}
+
+let user2: User = {
+    name: "rocky",
+    age: 15,
+    address: {
+        city: "Bengaluru",
+        country: "India",
+        pincode: 560086
+    }
+}
+
+function isAdult(user: User): boolean {
+    if (user.age >= 18) {
+        return true;
+    } else {
+        return false
+    }
+}
+
+const res = isAdult(user2);
+if (res) {
+    console.log("I am an Adult");
+} else {
+    console.log("I am not an Adult");
+}
